@@ -3,48 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caele</title>
+  <title>Caele - Encuentra tu próxima fiesta</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --surface: #131a2a;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #ec4899;
+      --accent-hover: #db2777;
+      --border: #263147;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e1b4b, #131a2a);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .tagline {
+      color: #f472b6;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .banner {
+      margin-bottom: 1.5rem;
+    }
+
+    .banner svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    footer {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin-top: 0.3rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Caele</h1>
-    <p><strong>¿Aburrido en casa? Encuentra el mejor ambiente cerca de ti.</strong></p>
-    <p>
-      Caele es la aplicación donde puedes publicar tu fiesta para que más gente caiga, o descubrir
-      reuniones y eventos activos cerca de tu ubicación en tiempo real.
-    </p>
-    <p>Explora las fiestas disponibles hoy mismo y arma tu plan sin complicaciones.</p>
-  </header>
-
-  <section aria-label="Banner Caele">
-    <svg width="100%" height="120" viewBox="0 0 600 120" role="img" aria-label="Banner promocional de Caele">
-      <rect width="600" height="120" rx="10" fill="#1e1b4b" />
-      <text x="30" y="55" fill="#f8fafc" font-size="24" font-family="sans-serif" font-weight="bold">
-        Caele: Fiestas y Planes al Instante
-      </text>
-      <text x="30" y="85" fill="#c7d2fe" font-size="14" font-family="sans-serif">
-        Publica tu reunión o descubre dónde está el ambiente cerca de ti
-      </text>
-    </svg>
-  </section>
-
-  <main>
-    <section>
-      <h2>¿Por qué usar Caele?</h2>
+  <div class="container">
+    <header>
+      <h1>Caele</h1>
+      <p class="tagline">¿Aburrido en casa? Encuentra el mejor ambiente cerca de ti.</p>
       <p>
-        Muchos fines de semana terminan sin plan porque no sabes dónde hay reunión o porque los
-        anfitriones no logran difundir su fiesta a tiempo. Caele conecta ambos lados en segundos.
+        Caele es la aplicación donde puedes publicar tu fiesta para que más gente caiga, o descubrir
+        reuniones y eventos activos cerca de tu ubicación en tiempo real.
       </p>
+      <p>Explora las fiestas disponibles hoy mismo y arma tu plan sin complicaciones.</p>
+      <a href="#contacto" class="btn">Comienza ahora</a>
+    </header>
+
+    <section class="banner" aria-label="Banner Caele">
+      <svg viewBox="0 0 800 130" role="img" aria-label="Banner promocional de Caele">
+        <rect width="800" height="130" fill="#1e1b4b" />
+        <text x="36" y="58" fill="#f8fafc" font-size="26" font-family="sans-serif" font-weight="bold">
+          Caele: Fiestas y Planes al Instante
+        </text>
+        <text x="36" y="92" fill="#c7d2fe" font-size="16" font-family="sans-serif">
+          Publica tu reunión o descubre dónde está el ambiente cerca de ti
+        </text>
+      </svg>
     </section>
 
-    <section>
-      <h2>Beneficios principales</h2>
-      <ul>
-        <li><strong>Planes al momento:</strong> Encuentra fiestas activas cerca de ti cuando estás aburrido.</li>
-        <li><strong>Difusión rápida para anfitriones:</strong> Publica tu evento con hora, ubicación y reglas básicas.</li>
-        <li><strong>Comunidad social activa:</strong> Conoce gente nueva y mantente al tanto de los eventos locales.</li>
-      </ul>
-    </section>
-  </main>
+    <main class="grid">
+      <section class="card">
+        <h2>¿Por qué usar Caele?</h2>
+        <p>
+          Muchos fines de semana terminan sin plan porque no sabes dónde hay reunión o porque los
+          anfitriones no logran difundir su fiesta a tiempo. Caele conecta ambos lados en segundos.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Beneficios principales</h2>
+        <ul>
+          <li><strong>Planes al momento:</strong> Encuentra fiestas activas cerca de ti cuando estás aburrido.</li>
+          <li><strong>Difusión rápida para anfitriones:</strong> Publica tu evento con hora, ubicación y reglas básicas.</li>
+          <li><strong>Comunidad social activa:</strong> Conoce gente nueva y mantente al tanto de los eventos locales.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <h2>Contacto</h2>
+      <p>Correo: hola@caeleapp-demo.example</p>
+      <p>Teléfono: +52 (618) 555-0148</p>
+      <p>Instagram: @caele.app.demo (Datos ficticios para fines académicos)</p>
+    </footer>
+  </div>
 </body>
 </html>
