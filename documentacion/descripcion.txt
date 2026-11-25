@@ -1,0 +1,14 @@
+Nombre: Caele
+
+Problema: Muchas personas quieren salir o socializar cuando están aburridas,
+        pero no saben dónde hay fiestas o reuniones disponibles cerca de ellas,
+        mientras que los anfitriones tienen dificultad para dar a conocer sus
+        eventos de forma rápida y organizada.
+
+Objetivo: Conectar a organizadores de fiestas con personas que buscan planes
+        cerca de su ubicación mediante una plataforma sencilla y en tiempo real.
+
+Descripción: Caele es una aplicación donde los usuarios pueden publicar fiestas
+            o reuniones sociales indicando detalles básicos del evento,
+            ermitiendo que otras personas descubran planes disponibles y
+            decidan asistir.
